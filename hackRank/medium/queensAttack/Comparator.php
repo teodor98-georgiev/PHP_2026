@@ -1,18 +1,17 @@
 <?php
 
+namespace queensAttack;
 class Comparator
 {
-//    public $point = null;
-//    public $cs = null;
-//
-//    public function __construct($xyCoord, $cs)
-//    {
-//        $this->point = $xyCoord;
-//        $this->cs = $cs;
-//    }
 
+    public function __construct()
+    {
+    }
 
-    function isEqual($x, $y){
-        $x === $y;
+    function isEqual($x, $y) {
+        if ($x === $y){
+            return true;
+        }
+        return false;
     }
 }

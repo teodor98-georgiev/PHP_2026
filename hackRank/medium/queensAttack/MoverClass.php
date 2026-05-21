@@ -2,8 +2,6 @@
 
 namespace queensAttack;
 
-use Comparator;
-
 class MoverClass
 {
     private $cs;
@@ -37,31 +35,57 @@ class MoverClass
             if ($comparator->isEqual($tempPoint->x,$this->cs->obst1->x) && ($comparator->isEqual($tempPoint->y,$this->cs->obst1->y))){
                 break;
             }
-            if ($tempPoint->x === $this->cs->obst2->x && $tempPoint->y === $this->cs->obst2->y) {
+//            if ($tempPoint->x === $this->cs->obst2->x && $tempPoint->y === $this->cs->obst2->y) {
+//                break;
+//            }
+
+            if ($comparator->isEqual($tempPoint->x,$this->cs->obst2->x) && $comparator->isEqual($tempPoint->y,$this->cs->obst2->y)) {
                 break;
             }
 
             $this->cs->surfCounter++;
 
             // Diagonal edges check
-            if ($tempPoint->x === $this->cs->edgeUpLeft->x && $tempPoint->y === $this->cs->edgeUpLeft->y) {
+//            if ($tempPoint->x === $this->cs->edgeUpLeft->x && $tempPoint->y === $this->cs->edgeUpLeft->y) {
+//                break;
+//            }
+            if ($comparator->isEqual($tempPoint->x,$this->cs->edgeUpLeft->x) && $comparator->isEqual($tempPoint->y,$this->cs->edgeUpLeft->y)) {
                 break;
             }
-            if ($tempPoint->x === $this->cs->edgeUpRight->x && $tempPoint->y === $this->cs->edgeUpRight->y) {
+
+//            if ($tempPoint->x === $this->cs->edgeUpRight->x && $tempPoint->y === $this->cs->edgeUpRight->y) {
+//                break;
+//            }
+            if ($comparator->isEqual($tempPoint->x,$this->cs->edgeUpRight->x) && $comparator->isEqual($tempPoint->y,$this->cs->edgeUpRight->y)) {
                 break;
             }
-            if ($tempPoint->x === $this->cs->edgeDownLeft->x && $tempPoint->y === $this->cs->edgeDownLeft->y) {
+//            if ($tempPoint->x === $this->cs->edgeDownLeft->x && $tempPoint->y === $this->cs->edgeDownLeft->y) {
+//                break;
+//            }
+            if ($comparator->isEqual($tempPoint->x,$this->cs->edgeDownLeft->x) && $comparator->isEqual($tempPoint->y,$this->cs->edgeDownLeft->y)) {
                 break;
             }
-            if ($tempPoint->x === $this->cs->edgeDownRight->x && $tempPoint->y === $this->cs->edgeDownRight->y) {
+//            if ($tempPoint->x === $this->cs->edgeDownRight->x && $tempPoint->y === $this->cs->edgeDownRight->y) {
+//                break;
+//            }
+
+            if ($comparator->isEqual($tempPoint->x,$this->cs->edgeDownRight->x) && ($comparator->isEqual($tempPoint->y,$this->cs->edgeDownRight->y))) {
                 break;
             }
 
             // Crossly edges check
-            if ($tempPoint->x === $this->cs->leftXEdge->x || $tempPoint->x === $this->cs->rightXEdge->x) {
+//            if ($tempPoint->x === $this->cs->leftXEdge->x || $tempPoint->x === $this->cs->rightXEdge->x) {
+//                break;
+//            }
+
+            if ($comparator->isEqual($tempPoint->x, $this->cs->leftXEdge->x) || $comparator->isEqual($tempPoint->x, $this->cs->rightXEdge->x)) {
                 break;
             }
-            if ($tempPoint->y === $this->cs->upYedge->y || $tempPoint->y === $this->cs->downYedge->y) {
+//            if ($tempPoint->y === $this->cs->upYedge->y || $tempPoint->y === $this->cs->downYedge->y) {
+//                break;
+//            }
+
+            if ($comparator->isEqual($tempPoint->y,$this->cs->upYedge->y) || $comparator->isEqual($tempPoint->y,$this->cs->upYedge->y)) {
                 break;
             }
         }

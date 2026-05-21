@@ -5,6 +5,7 @@
 require_once 'Point.php';
 require_once 'ChessSettings.php';
 require_once 'MoverClass.php';
+require_once 'Comparator.php';
 
 use queensAttack\Point;
 use queensAttack\ChessSettings;
@@ -14,5 +15,5 @@ $cs = new ChessSettings();
 
 $mc = new MoverClass($cs);
 
-$mc->moveAndCountAll($cs);
-$mc->PrintOutCounter();
+$mc->moveAndCountAll();
+$mc->printOutCounter();

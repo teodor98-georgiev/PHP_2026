@@ -12,7 +12,4 @@ class Point
         $this->x = $pX;
         $this->y = $pY;
     }
-
-
-
 }
